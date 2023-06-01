@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link th:href="@{/login/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{/login/css/signin.css}" rel="stylesheet">
+</head>
+<body class="text-center">
+
+<form action=""class="form-signin" th:action="@{/userLogin}" method="post">
+    <img class="mb-4" th:src="@{/login/img/login.jpg}" alt="" width="72" height="72" >
+    <h1 class="h3 mb-3 font-weight-normal" th:text="#{login.tip}">请登录</h1>
+    <!-- autofocus 聚焦到 账号框-->
+    <input class="form-control" type="text" th:placeholder="#{login.username}" required="" autofocus="" name="username">
+    <input class="form-control" type="password" th:placeholder="#{login.password}" required="" name="passowrd">
+    <div class="checkbox mb-3">
+        <label>
+            <input type="checkbox" name="remember-me" > [[#{login.rememberme}]]
+        </label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" th:text="#{login.button}">登录</button>
+    <!-- 用户登录错误信息提示框 -->
+    <div th:if="${param.error}" style="color: red;height: 40px;text-align: left;font-size: 1.1em">
+<!-- <img th:src="@{/login/img/loginError.jpg}" width="20px"> -->用户名或密码错误，请重新登录！
+    </div>
+    <a class="btn btn-sm" th:href="@{/toLoginPage(l='zh_CN')}">中文</a>
+    <a class="btn btn-sm" th:href="@{/toLoginPage(l='en_US')}">English</a>
+
+<!--    <Script>-->
+<!--        var search = window.location.search;-->
+<!--        var result = search.match(/error/g);-->
+<!--        if (result == "error"){-->
+<!--            // var error = "<p>" + 登录失败 + "</p>";-->
+<!--            // document.write(error);-->
+<!--            window.alert("登录失败")-->
+<!--        }-->
+<!--    </Script>-->
+    <p>© <span th:text="${currentYear}">2018</span>-<span th:text="${currentYear}+1">2019</span></p>
+
+</form>
+
+
+</body>
+</html>
