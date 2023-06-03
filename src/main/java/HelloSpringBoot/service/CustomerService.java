@@ -2,6 +2,7 @@ package HelloSpringBoot.service;
 
 import HelloSpringBoot.domain.Authority;
 import HelloSpringBoot.domain.Customer;
+import HelloSpringBoot.domain.StuGrade;
 import HelloSpringBoot.repository.AuthorityRepository;
 import HelloSpringBoot.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,5 +23,6 @@ public class CustomerService {
     public List<Authority> getAuthorities(String username){
         return authorityRepository.findAuthoritiesByUsername(username);
     }
+
 
 }

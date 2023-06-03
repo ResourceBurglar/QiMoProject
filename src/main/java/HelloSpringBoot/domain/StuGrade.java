@@ -6,16 +6,18 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity(name = "stu_grade")
-public class StuGrade {
+public class StuGrade{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String stuname;
+    private Integer classid;
     private Integer yuwen;
     private Integer math;
     private Integer english;
     private Integer average;
     private Integer allgrade;
+    private String classname;
 
     public Integer getId() {
         return id;
@@ -33,44 +35,61 @@ public class StuGrade {
         this.stuname = stuname;
     }
 
-    public int getYuwen() {
+    public Integer getYuwen() {
         return yuwen;
     }
 
-    public void setYuwen(int yuwen) {
+    public void setYuwen(Integer yuwen) {
         this.yuwen = yuwen;
     }
 
-    public int getMath() {
+    public Integer getMath() {
         return math;
     }
 
-    public void setMath(int math) {
+    public void setMath(Integer math) {
         this.math = math;
     }
 
-    public int getEnglish() {
+    public Integer getEnglish() {
         return english;
     }
 
-    public void setEnglish(int english) {
+    public void setEnglish(Integer english) {
         this.english = english;
     }
 
-    public int getAverage() {
+    public Integer getAverage() {
         return average;
     }
 
-    public void setAverage(int average) {
+    public void setAverage(Integer average) {
         this.average = average;
     }
 
-    public int getAllgrade() {
+    public Integer getAllgrade() {
         return allgrade;
     }
 
-    public void setAllgrade(int allgrade) {
+    public void setAllgrade(Integer allgrade) {
         this.allgrade = allgrade;
+    }
+
+    public Integer getClassid() {
+        return classid;
+    }
+
+    public void setClassid(Integer classid) {
+        this.classid = classid;
+    }
+
+
+    public String getClassname() {
+        return classname;
+    }
+
+    public void setClassname(String classname) {
+        this.classname = classname;
     }
 
     @Override

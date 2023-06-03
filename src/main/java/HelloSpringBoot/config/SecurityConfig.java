@@ -51,8 +51,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests().
                 antMatchers("/userLogin").permitAll().
                 antMatchers("/login/**").permitAll().
-                antMatchers("/datail/common/**").hasAnyRole("stu")
-                .antMatchers("/detail/vip/**").hasAnyRole("teach","stu")
+                antMatchers("/datail/common/**").hasAnyRole("stu","teach")
+
+                .antMatchers("/detail/vip/**").hasAnyRole("teach")
                 .anyRequest().authenticated(); //.and().formLogin();
 
         // 设置自定义登录页面
