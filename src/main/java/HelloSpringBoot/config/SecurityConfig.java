@@ -22,7 +22,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder(); // 加密器
-        System.out.println(bCryptPasswordEncoder.encode("123"));
+
 
         // 1、内存身份认证
         /*
@@ -42,6 +42,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         // 3、userDetailService身份认证
         auth.userDetailsService(userDetailServiceImp).passwordEncoder(bCryptPasswordEncoder);
+
     }
 
     // 权限控制
@@ -50,10 +51,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //        antMatchers("/").permitAll().
         http.authorizeRequests().
                 antMatchers("/userLogin").permitAll().
-                antMatchers("/login/**").permitAll().
-                antMatchers("/datail/common/**").hasAnyRole("stu","teach")
+                antMatchers("/login/**").permitAll()
+//                antMatchers("/datail/common/**").hasAnyRole("student","teacher")
+//                .antMatchers("/detail/vip/**").hasAnyRole("teacher")
 
-                .antMatchers("/detail/vip/**").hasAnyRole("teach")
+
                 .anyRequest().authenticated(); //.and().formLogin();
 
         // 设置自定义登录页面
@@ -65,6 +67,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         // 记住我
         http.rememberMe().rememberMeParameter("remember-me").tokenValiditySeconds(30)
                 .tokenRepository(tokenRepository());
+
 
 //        关闭 csrf防护功能
 //        http.csrf().disable();

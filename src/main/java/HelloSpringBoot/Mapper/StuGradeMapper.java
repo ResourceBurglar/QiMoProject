@@ -13,6 +13,4 @@ public interface StuGradeMapper {
     @Select("select * from stu_class as sc join stu_grade as sg on sc.id = sg.classid")
     public List<StuGrade>getAllGrade();
 
-
-
 }
