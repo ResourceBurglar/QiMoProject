@@ -1,19 +1,18 @@
 package HelloSpringBoot.controller;
 
 
-import HelloSpringBoot.Mapper.StuGradeMapper;
-import HelloSpringBoot.config.SecurityConfig;
-import HelloSpringBoot.domain.StuClass;
+
 import HelloSpringBoot.domain.StuGrade;
+import HelloSpringBoot.service.StuGradeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
+import java.lang.reflect.Field;
 import java.security.Security;
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
@@ -36,26 +35,37 @@ public class FilmController {
 
 
     @Autowired
-    private StuGradeMapper stuGradeMapper;
+    StuGradeService stuGradeService;
     @GetMapping("/")
-    public String indexView(Model model){
-        List<StuGrade> GradeList = stuGradeMapper.getAllGrade();
+    public String indexView(Model model) {
+        List<StuGrade> GradeList = stuGradeService.getAllGrade();
         model.addAttribute("StuGradeList",GradeList);
+        model.addAttribute("fields", getFields(StuGrade.class));
         System.out.println(GradeList);
         return "index";
     }
 
-    @GetMapping("/insertGrade")
-    public String insertGrade(){
-
+    @PostMapping("/insertGrade")
+    @CrossOrigin(origins="*")
+    public String insertGrade(@RequestBody List<StuGrade> stuGrades){
+        stuGradeService.insertGrades(stuGrades);
 
         return "index";
     }
 
 
-
-
-
+    // 动态获取属性名
+    public List getFields(Class<?> className) {
+        Field[] fields = className.getDeclaredFields();
+        List list = new ArrayList();
+        for (Field field : fields) {
+            String name = field.getName();
+            if (!(name.equals("id")  || name.equals("classid"))) {
+                list.add(name);
+            }
+        }
+        return list;
+    }
 
 
 

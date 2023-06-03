@@ -1,5 +1,6 @@
 package HelloSpringBoot.domain;
 
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,13 +12,14 @@ public class StuGrade{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String stuname;
-    private Integer classid;
+    private String classname;
     private Integer yuwen;
     private Integer math;
     private Integer english;
     private Integer average;
     private Integer allgrade;
-    private String classname;
+
+    private Integer classid;
 
     public Integer getId() {
         return id;
@@ -90,6 +92,14 @@ public class StuGrade{
 
     public void setClassname(String classname) {
         this.classname = classname;
+    }
+
+    public void countSum() {
+        this.allgrade = this.yuwen + this.math + this.english;
+    }
+
+    public void countAver() {
+        this.average = this.allgrade / 3;
     }
 
     @Override

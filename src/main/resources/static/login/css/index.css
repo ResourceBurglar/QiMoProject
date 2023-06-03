@@ -1,0 +1,25 @@
+.table {
+    margin-bottom: -1px !important;
+}
+
+.table th, .table td {
+    width: 150px !important;
+}
+
+.table input {
+    outline: none !important;
+}
+
+.none {
+    display: none;
+}
+
+/*#form-container {*/
+/*    position: relative;*/
+/*}*/
+
+/*#send {*/
+/*    position: absolute;*/
+/*    left: 0;*/
+/*    bottom: 0;*/
+/*}*/

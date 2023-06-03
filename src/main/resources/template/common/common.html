@@ -1,0 +1,26 @@
+<button class="btn btn-primary mb-3" id="addStudents">添加学生信息</button>
+<!--	<ul>-->
+<!--		<li><a th:href="@{/detail/common/1}">飞驰人生</a></li>-->
+<!--		<li><a th:href="@{/detail/common/2}">夏洛特烦恼</a></li>-->
+<!--	</ul>-->
+<table class="table table-bordered">
+  <tr>
+    <th>姓名</th>
+    <th>班级</th>
+    <th>语文</th>
+    <th>数学</th>
+    <th>英语</th>
+    <th>平均分</th>
+    <th>总分</th>
+  </tr>
+  <tr th:each="StuGrade: ${StuGradeList}">
+    <td th:text="${StuGrade.stuname}">11</td>
+    <td th:if="${StuGrade.classname != null}" th:text="${StuGrade.classname}"></td>
+    <td th:text="${StuGrade.yuwen}">111</td>
+    <td th:text="${StuGrade.math}">11</td>
+    <td th:text="${StuGrade.english}">11</td>
+    <td th:text="${StuGrade.average}">11</td>
+    <td th:text="${StuGrade.allgrade}">11</td>
+  </tr>
+</table>
+

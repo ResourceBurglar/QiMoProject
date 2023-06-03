@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -20,10 +23,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c357bf4-f2a4-4f6e-ab45-a83b4bb32742" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_2_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_2_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_2_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_3_4_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_annotation_3_4_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_boot_starter_3_4_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_core_3_4_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_extension_3_4_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_2_0_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_6.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" afterDir="false" />
@@ -68,6 +77,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_5_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_5_Final.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_2_23_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_2_23_4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_2_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_2_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_2_0_0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" afterDir="false" />
@@ -118,14 +131,11 @@
       <change beforePath="$PROJECT_DIR$/7Security.iml" beforeDir="false" afterPath="$PROJECT_DIR$/7Security.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/HelloSpringBoot/HelloSpringBoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HelloSpringBoot/HelloSpringBoot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HelloSpringBoot/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HelloSpringBoot/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HelloSpringBoot/Mapper/StuGradeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HelloSpringBoot/Mapper/StuGradeMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/HelloSpringBoot/controller/FilmController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HelloSpringBoot/controller/FilmController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HelloSpringBoot/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HelloSpringBoot/controller/HelloController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/HelloSpringBoot/domain/StuGrade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HelloSpringBoot/domain/StuGrade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HelloSpringBoot/repository/StuGradeRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HelloSpringBoot/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HelloSpringBoot/service/CustomerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/springbootdata.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/springbootdata.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/login/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/login/css/bootstrap.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/template/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -136,18 +146,24 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+        <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="userSettingsFile" value="D:\SpringBoot\settings.xml" />
+        <option name="userSettingsFile" value="F:\学习\springboot\settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -156,32 +172,43 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RequestMappingsPanelOrder0" value="0" />
-    <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../New" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "G:/新建文件夹/实训/final/project",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "spring.configuration.checksum": "71547f36b9488452c47e4bc989489b46",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\学习\springboot\qimo\src\main\resources\mapper" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="HelloSpringBoot" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="7Security" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="HelloSpringBoot.HelloSpringBoot" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="HelloSpringBoot.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="HelloSpringBoot.HelloSpringBoot" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -192,6 +219,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -213,12 +241,15 @@
       <workItem from="1685684668516" duration="52000" />
       <workItem from="1685715039065" duration="83000" />
       <workItem from="1685771850148" duration="14059000" />
+      <workItem from="1685788445639" duration="1735000" />
+      <workItem from="1685790192503" duration="1355000" />
+      <workItem from="1685791578619" duration="23094000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -234,79 +265,5 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="222" />
     <option name="LAST_COMMIT_MESSAGE" value="222" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="440" y="94" key="#Project_Structure" timestamp="1685637149348">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1685637149348" />
-    <state x="293" y="173" key="#com.intellij.ide.util.MemberChooser" timestamp="1685785944491">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="293" y="173" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1685785944491" />
-    <state x="174" y="86" width="1536" height="861" key="DiffContextDialog" timestamp="1685636316348">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="174" y="86" width="1536" height="861" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1685636316348" />
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1685773451201">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1685773451201" />
-    <state x="832" y="417" key="Github.ShareDialog" timestamp="1685636769544">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="832" y="417" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1685636769544" />
-    <state width="1447" height="302" key="GridCell.Tab.0.bottom" timestamp="1685786441214">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1447" height="302" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1685786441214" />
-    <state width="1447" height="302" key="GridCell.Tab.0.center" timestamp="1685786441214">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1447" height="302" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1685786441214" />
-    <state width="1447" height="302" key="GridCell.Tab.0.left" timestamp="1685786441214">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1447" height="302" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1685786441214" />
-    <state width="1447" height="302" key="GridCell.Tab.0.right" timestamp="1685786441214">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1447" height="302" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1685786441214" />
-    <state width="1447" height="302" key="GridCell.Tab.1.bottom" timestamp="1685786441214">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1447" height="302" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1685786441214" />
-    <state width="1447" height="302" key="GridCell.Tab.1.center" timestamp="1685786441214">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1447" height="302" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1685786441214" />
-    <state width="1447" height="302" key="GridCell.Tab.1.left" timestamp="1685786441214">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1447" height="302" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1685786441214" />
-    <state width="1447" height="302" key="GridCell.Tab.1.right" timestamp="1685786441214">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1447" height="302" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1685786441214" />
-    <state x="729" y="221" key="RollbackChangesDialog" timestamp="1685636376251">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="729" y="221" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1685636376251" />
-    <state x="461" y="164" key="SettingsEditor" timestamp="1685684716901">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1685684716901" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1685637638263">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1685637638263" />
-    <state x="646" y="306" key="git4idea.merge.GitPullDialog" timestamp="1685637426437">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="646" y="306" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1685637426437" />
-    <state x="721" y="377" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1685637404933">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="721" y="377" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1685637404933" />
   </component>
 </project>
