@@ -11,7 +11,7 @@
  Target Server Version : 80032
  File Encoding         : 65001
 
- Date: 04/06/2023 01:39:50
+ Date: 05/06/2023 01:03:13
 */
 
 SET NAMES utf8mb4;
@@ -46,7 +46,9 @@ CREATE TABLE `stu_class`  (
 -- ----------------------------
 -- Records of stu_class
 -- ----------------------------
-INSERT INTO `stu_class` VALUES (1, 'sb班');
+INSERT INTO `stu_class` VALUES (1, 'SB班');
+INSERT INTO `stu_class` VALUES (2, 'NB班');
+INSERT INTO `stu_class` VALUES (3, 'BT班');
 
 -- ----------------------------
 -- Table structure for stu_grade
@@ -55,22 +57,22 @@ DROP TABLE IF EXISTS `stu_grade`;
 CREATE TABLE `stu_grade`  (
   `id` int(0) NOT NULL AUTO_INCREMENT,
   `stuname` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `classid` int(0) NULL DEFAULT NULL,
+  `classname` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   `yuwen` int(0) NULL DEFAULT NULL,
   `math` int(0) NULL DEFAULT NULL,
   `english` int(0) NULL DEFAULT NULL,
   `average` int(0) NULL DEFAULT NULL,
   `allgrade` int(0) NULL DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE,
-  INDEX `classid`(`classid`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of stu_grade
 -- ----------------------------
-INSERT INTO `stu_grade` VALUES (1, '欧沸烈', 1, 80, 65, 90, 90, 270);
-INSERT INTO `stu_grade` VALUES (2, '张伟', 1, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `stu_grade` VALUES (3, '你好', 1, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `stu_grade` VALUES (1, '欧沸烈', 'SB班', 80, 65, 90, 90, 270);
+INSERT INTO `stu_grade` VALUES (4, '张三', 'NB班', 1, 1, 1, 1, 3);
+INSERT INTO `stu_grade` VALUES (5, '李四', 'BT班', 2, 2, 2, 2, 6);
+INSERT INTO `stu_grade` VALUES (6, '王五', 'SB班', 3, 1, 1, 1, 5);
 
 -- ----------------------------
 -- Table structure for t_authority
@@ -99,7 +101,7 @@ CREATE TABLE `t_customer`  (
   `password` varchar(200) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
   `valid` tinyint(1) NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 42 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of t_customer
@@ -118,7 +120,7 @@ CREATE TABLE `t_customer_authority`  (
   `customer_id` int(0) NULL DEFAULT NULL,
   `authority_id` int(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of t_customer_authority
