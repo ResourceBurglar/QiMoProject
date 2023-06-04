@@ -3,12 +3,17 @@ package HelloSpringBoot.config;
 import HelloSpringBoot.service.implement.UserDetailServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.web.access.channel.ChannelProcessingFilter;
 import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
+import org.springframework.security.web.header.writers.ReferrerPolicyHeaderWriter;
+import org.springframework.web.filter.CorsFilter;
 
 import javax.sql.DataSource;
 
@@ -18,11 +23,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private DataSource dataSource; // 2、JDBC身份认证
     @Autowired
     private UserDetailServiceImp userDetailServiceImp;
+
+
     // 设置身份验证
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder(); // 加密器
-        System.out.println(bCryptPasswordEncoder.encode("123"));
+
 
         // 1、内存身份认证
         /*
@@ -42,6 +49,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         // 3、userDetailService身份认证
         auth.userDetailsService(userDetailServiceImp).passwordEncoder(bCryptPasswordEncoder);
+
     }
 
     // 权限控制
@@ -50,10 +58,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //        antMatchers("/").permitAll().
         http.authorizeRequests().
                 antMatchers("/userLogin").permitAll().
-                antMatchers("/login/**").permitAll().
-                antMatchers("/datail/common/**").hasAnyRole("stu","teach")
+                antMatchers("/login/**").permitAll()
+//                antMatchers("/datail/common/**").hasAnyRole("student","teacher")
+//                .antMatchers("/detail/vip/**").hasAnyRole("teacher")
+                .antMatchers("/admin/**").hasAuthority("Admin")
 
-                .antMatchers("/detail/vip/**").hasAnyRole("teach")
+
                 .anyRequest().authenticated(); //.and().formLogin();
 
         // 设置自定义登录页面
@@ -66,9 +76,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.rememberMe().rememberMeParameter("remember-me").tokenValiditySeconds(30)
                 .tokenRepository(tokenRepository());
 
+
 //        关闭 csrf防护功能
 //        http.csrf().disable();
+
+
+        // 设置跨域
+//        http.headers().referrerPolicy(ReferrerPolicyHeaderWriter.ReferrerPolicy.STRICT_ORIGIN_WHEN_CROSS_ORIGIN);
+
+
     }
+
 
     @Bean
     public JdbcTokenRepositoryImpl tokenRepository(){

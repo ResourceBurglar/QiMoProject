@@ -14,12 +14,32 @@
     display: none;
 }
 
-/*#form-container {*/
-/*    position: relative;*/
-/*}*/
+.form-container {
+    position: relative;
+}
 
-/*#send {*/
-/*    position: absolute;*/
-/*    left: 0;*/
-/*    bottom: 0;*/
-/*}*/
+#send {
+    position: absolute;
+    left: 0;
+    bottom: -120px;
+}
+
+.add-bar {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.add-bar .icon-tianjia {
+    font-size: 50px;
+    transition: all .2s;
+}
+
+.add-bar .icon-tianjia:hover {
+    transform: scale(1.2);
+}

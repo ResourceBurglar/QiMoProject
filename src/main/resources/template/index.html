@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>影视直播厅</title>
 	<link rel="stylesheet" th:href="@{/login/css/bootstrap.min.css}">
 	<link rel="stylesheet" th:href="@{/login/css/index.css}">
+	<link rel="stylesheet" th:href="@{/login/css/iconfont.css}">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="_csrf" th:content="${_csrf.token}">
 	<meta name="_csrf_header" th:content="${_csrf.headerName}">
+	<title>影视直播厅</title>
 </head>
 <body>
 <h1 align="center">欢迎进入电影网站首页</h1>
@@ -20,29 +21,41 @@
 	</form>
 </div>
 <hr>
-	<div class="container">
-		<div sec:authorize="hasAnyRole('stu','teach')" class="mb-3" id="form-container">
-			<h3>学生信息</h3>
-			<div th:insert="common/common.html"></div>
-		</div>
-		<div sec:authorize="hasAuthority('ROLE_teach')">
-			<!--	<h3>VIP专享</h3>-->
-			<!--	<ul>-->
-			<!--		<li><a th:href="@{/detail/vip/1}">速度与激情</a></li>-->
-			<!--		<li><a th:href="@{/detail/vip/2}">猩球崛起</a></li>-->
-			<!--	</ul>-->
+<div class="container">
+	<div sec:authorize="hasAnyAuthority('student')" class="mb-3 form-container" >
+		<h3>学生信息</h3>
+		<div th:insert="student/studentInfo.html"></div>
 
-			<div th:insert="common/common.html"></div>
-		</div>
+
+
+	</div>
+	<div sec:authorize="hasAuthority('teacher')" class="form-inner-container" id="form-container">
+		<!--	<h3>VIP专享</h3>-->
+		<!--	<ul>-->
+		<!--		<li><a th:href="@{/detail/vip/1}">速度与激情</a></li>-->
+		<!--		<li><a th:href="@{/detail/vip/2}">猩球崛起</a></li>-->
+		<!--	</ul>-->
+
+		<div th:insert="teacher/common.html"></div>
+		<div class="add-bar" id="add-bar"><i class="iconfont icon-tianjia"></i></div>
+
 	</div>
 
-	<script th:inline="javascript">
-		let fields =  [[${fields}]];
+	<div sec:authorize="hasAuthority('Admin')">
+<!--		<a href="">添加班级</a>-->
+		<div th:insert="admin/register.html"></div>
 
-	</script>
+	</div>
+</div>
 
-	<script th:src="@{/login/js/jquery.js}"></script>
-	<script th:src="@{/login/js/index.js}"></script>
+<script th:inline="javascript">
+	let fields =  [[${fields}]];
+
+</script>
+
+<script th:src="@{/login/js/jquery.js}"></script>
+<script th:src="@{/login/js/index.js}"></script>
+</div>
 </body>
 </html>
 

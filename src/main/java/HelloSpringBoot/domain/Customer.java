@@ -1,7 +1,11 @@
 package HelloSpringBoot.domain;
 
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+
 import javax.persistence.*;
+
 
 /**
  * Created by crazyStone 2018-11-7.
@@ -9,10 +13,12 @@ import javax.persistence.*;
 @Entity(name = "t_customer")
 public class Customer {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
     private String username;
     private String password;
+
+
 
 
     public Integer getId() {
@@ -38,6 +44,8 @@ public class Customer {
     public void setPassword(String password) {
         this.password = password;
     }
+
+
 
     @Override
     public String toString() {

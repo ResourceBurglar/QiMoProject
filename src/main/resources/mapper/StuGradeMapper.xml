@@ -3,10 +3,10 @@
 <mapper namespace="HelloSpringBoot.Mapper.StuGradeMapper">
 
     <insert id="insertGrades" parameterType="java.util.List" useGeneratedKeys="true"  keyProperty="id">
-        INSERT INTO stu_grade(stuname, classid, yuwen, math, english, average, allgrade)
+        INSERT INTO stu_grade(stuname,yuwen, classname,math, english, average, allgrade)
         VALUES
         <foreach collection="list" item="item" separator=",">
-            (#{item.stuname}, #{item.classid}, #{item.yuwen}, #{item.math}, #{item.english}, #{item.average}, #{item.allgrade} )
+            (#{item.stuname}, #{item.yuwen}, #{item.classname},#{item.math}, #{item.english}, #{item.average}, #{item.allgrade} )
         </foreach>
     </insert>
 

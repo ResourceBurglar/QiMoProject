@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table class="table table-bordered">
+    <tr>
+        <th>姓名</th>
+        <th>班级</th>
+        <th>语文</th>
+        <th>数学</th>
+        <th>英语</th>
+        <th>平均分</th>
+        <th>总分</th>
+    </tr>
+    <tr th:each="StuGrade: ${StuGradeList}">
+        <td th:text="${StuGrade.stuname}">11</td>
+        <td th:text="${StuGrade.classname}"></td>
+        <td th:text="${StuGrade.yuwen}">111</td>
+        <td th:text="${StuGrade.math}">11</td>
+        <td th:text="${StuGrade.english}">11</td>
+        <td th:text="${StuGrade.average}">11</td>
+        <td th:text="${StuGrade.allgrade}">11</td>
+    </tr>
+</body>
+</html>

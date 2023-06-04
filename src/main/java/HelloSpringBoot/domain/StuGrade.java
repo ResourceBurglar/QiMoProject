@@ -18,7 +18,6 @@ public class StuGrade{
     private Integer english;
     private Integer average;
     private Integer allgrade;
-
     private Integer classid;
 
     public Integer getId() {

@@ -34,7 +34,7 @@ public class StuGradeServiceImpl extends ServiceImpl<StuGradeMapper,StuGrade> im
         for (StuGrade stuGrade: list) {
             stuGrade.countSum();
             stuGrade.countAver();
-            stuGrade.setClassid(1);
+
             stuGrade.setId(4);
         }
         stuGradeMapper.insertGrades(list);

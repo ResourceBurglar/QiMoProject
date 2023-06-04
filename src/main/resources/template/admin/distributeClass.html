@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>学生分班</p>
+<tr th:each="classnamelist:${classNameList}">
+    <td>[[${classnamelist.classname}]]</td>
+</tr>
+
+<input type="text" id="classname"/>
+<div id="show"></div>
+<script th:inline="javascript">
+
+//    let classNamelist = [[${classNameList}]];
+//    var finallist = JSON.stringify(classNamelist);
+//    document.write(finallist);
+//    var input = document.getElementById('classname');
+//    var str = '';
+//    var show = document.getElementById('show');
+//    input.onkeyup = function(){
+//        show.style.display = 'block';
+//        let str = '';
+//
+//        for (var c in classNamelist){
+//            let result = classNamelist[c].classname.indexOf(input.value);
+//            if (result != -1)
+//            {
+//                str + "<p>" + result + "</p>";
+//                document.write(result);
+//            }
+//
+//        }
+//
+//        if (!input.value || !str){
+//            show.innerHTML="<p>暂无结果</p>";
+//        }else{
+//            show.innerHTML = str;
+//        }
+//    };
+//    input.onblur = function () {
+//        show.style.display = 'none';
+//        input.value = ''
+//    }
+
+</script>
+
+</body>
+</html>
