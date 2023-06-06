@@ -4,9 +4,7 @@ import HelloSpringBoot.domain.StuGrade;
 import HelloSpringBoot.vo.StuGradeQueryVo;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 
 import java.util.List;
@@ -27,6 +25,21 @@ public interface StuGradeMapper extends BaseMapper<StuGrade> {
 
     @Delete("delete from stu_grade where id = #{id}")
     void deleteGradeById(@Param("id") Integer id);
+
+    @Insert("insert into stu_grade(stuname)values(#{stuname})")
+    public void addStuButNoClass(String stuname);
+
+
+
+    @Select("select id,stuname from stu_grade as sg where  sg.classname ='' or sg.classname is null")
+    public List<StuGrade>NotClassStu();
+
+
+    @Update("update stu_grade set classname = #{classname} where id = #{id}")
+    public int distributeClass(@Param("classname")String name,@Param("id")Integer id);
+
+
+
 
 
 }

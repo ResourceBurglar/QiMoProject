@@ -1,19 +1,17 @@
-<button class="btn btn-primary mb-3" id="addStudents">添加学生成绩</button>
-<!--	<ul>-->
-<!--		<li><a th:href="@{/detail/common/1}">飞驰人生</a></li>-->
-<!--		<li><a th:href="@{/detail/common/2}">夏洛特烦恼</a></li>-->
-<!--	</ul>-->
+<button class="btn btn-primary mb-3" id="addStudents" @click="dynamicCreateRows()">添加学生成绩</button>
 <table class="table table-bordered">
-  <tr>
-    <th>姓名</th>
-    <th>班级</th>
-    <th>语文</th>
-    <th>数学</th>
-    <th>英语</th>
-    <th>平均分</th>
-    <th>总分</th>
-    <th>操作</th>
-  </tr>
+  <thead >
+    <tr>
+      <th>姓名</th>
+      <th>班级</th>
+      <th>语文</th>
+      <th>数学</th>
+      <th>英语</th>
+      <th>平均分</th>
+      <th>总分</th>
+      <th>操作</th>
+    </tr>
+  </thead>
   <tr th:each="StuGrade: ${StuGradeList}">
     <td th:text="${StuGrade.stuname}">11</td>
     <td th:text="${StuGrade.classname}"></td>
@@ -23,8 +21,10 @@
     <td th:text="${StuGrade.average}">11</td>
     <td th:text="${StuGrade.allgrade}">11</td>
     <td>
-      <button class="btn btn-danger remove-btn" th:data-id="${StuGrade.id}">删除</button>
-      <button class="btn btn-info change-btn" th:data-id="${StuGrade.id}">修改</button>
+      <button class="btn btn-danger remove-btn" th:data-id="${StuGrade.id}"
+              @click="remove">删除</button>
+      <button class="btn btn-info change-btn" th:data-id="${StuGrade.id}"
+              @click="dynamicCreateRows($event, 'insert')">修改</button>
       </td>
   </tr>
 </table>

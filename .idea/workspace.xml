@@ -22,7 +22,31 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c357bf4-f2a4-4f6e-ab45-a83b4bb32742" name="Default Changelist" comment="06-05" />
+    <list default="true" id="4c357bf4-f2a4-4f6e-ab45-a83b4bb32742" name="Default Changelist" comment="06-05">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/login/js/constant.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/login/js/utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/login/js/vue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/7Security.iml" beforeDir="false" afterPath="$PROJECT_DIR$/7Security.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HelloSpringBoot/Mapper/StuClassMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HelloSpringBoot/Mapper/StuClassMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HelloSpringBoot/Mapper/StuGradeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HelloSpringBoot/Mapper/StuGradeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HelloSpringBoot/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HelloSpringBoot/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HelloSpringBoot/controller/FilmController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HelloSpringBoot/controller/FilmController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HelloSpringBoot/service/StuGradeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HelloSpringBoot/service/StuGradeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HelloSpringBoot/service/implement/StuGradeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HelloSpringBoot/service/implement/StuGradeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/StuClassMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/StuGradeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/StuGradeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/login/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/login/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/login/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/login/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/template/admin/distributeClass.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/template/admin/distributeClass.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/template/admin/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/template/admin/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/template/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/template/student/studentInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/template/student/studentInfo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/template/teacher/common.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/template/teacher/common.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,8 +60,9 @@
       <list>
         <option value="Class" />
         <option value="HTML File" />
-        <option value="Interface" />
         <option value="FxmlFile" />
+        <option value="JavaScript File" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -62,7 +87,6 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -70,20 +94,21 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../New" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\G-DRAGON\Desktop\qimo\src\main\resources\template\teacher" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\学习\springboot\qimo1\src\main\resources\static\login\js" />
       <recent name="C:\Users\G-DRAGON\Desktop\qimo\src\main\resources\template\admin" />
       <recent name="E:\qimo\src\main\resources\static\login\font" />
       <recent name="E:\qimo\src\main\resources\static\login\css" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\学习\springboot\qimo1\src\main\resources\static\login\js" />
+      <recent name="C:\Users\G-DRAGON\Desktop\qimo\src\main\resources\template\teacher" />
     </key>
   </component>
   <component name="RunManager">
@@ -134,6 +159,10 @@
       <workItem from="1685859659497" duration="21070000" />
       <workItem from="1685883144832" duration="6564000" />
       <workItem from="1685892628241" duration="4337000" />
+      <workItem from="1685899048702" duration="334000" />
+      <workItem from="1685899448567" duration="12884000" />
+      <workItem from="1685942995883" duration="28983000" />
+      <workItem from="1686020337387" duration="6437000" />
     </task>
     <task id="LOCAL-00002" summary="06-05">
       <created>1685897704213</created>
@@ -193,61 +222,53 @@
     <option name="LAST_COMMIT_MESSAGE" value="06-05" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="736" y="386" width="447" height="274" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1685873815018">
+    <state x="1077" y="300" key="#com.intellij.ide.util.MemberChooser" timestamp="1685976507033">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="736" y="386" width="447" height="274" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1685873815018" />
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1685887003890">
+    <state x="1077" y="300" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1685976507033" />
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1685969155469">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1685887003890" />
-    <state width="1734" height="304" key="GridCell.Tab.0.bottom" timestamp="1685891947077">
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1685969155469" />
+    <state width="1860" height="366" key="GridCell.Tab.0.bottom" timestamp="1686026582568">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1734" height="304" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1685891947077" />
-    <state width="1734" height="304" key="GridCell.Tab.0.center" timestamp="1685891947077">
+    <state width="1860" height="366" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1686026582568" />
+    <state width="1860" height="366" key="GridCell.Tab.0.center" timestamp="1686026582568">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1734" height="304" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1685891947077" />
-    <state width="1734" height="304" key="GridCell.Tab.0.left" timestamp="1685891947077">
+    <state width="1860" height="366" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1686026582568" />
+    <state width="1860" height="366" key="GridCell.Tab.0.left" timestamp="1686026582568">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1734" height="304" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1685891947077" />
-    <state width="1734" height="304" key="GridCell.Tab.0.right" timestamp="1685891947077">
+    <state width="1860" height="366" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1686026582568" />
+    <state width="1860" height="366" key="GridCell.Tab.0.right" timestamp="1686026582568">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1734" height="304" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1685891947077" />
-    <state width="1734" height="170" key="GridCell.Tab.1.bottom" timestamp="1685891947046">
+    <state width="1860" height="366" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1686026582568" />
+    <state width="1860" height="366" key="GridCell.Tab.1.bottom" timestamp="1686026582569">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1734" height="170" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1685891947046" />
-    <state width="1734" height="170" key="GridCell.Tab.1.center" timestamp="1685891947046">
+    <state width="1860" height="366" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1686026582569" />
+    <state width="1860" height="366" key="GridCell.Tab.1.center" timestamp="1686026582569">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1734" height="170" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1685891947046" />
-    <state width="1734" height="170" key="GridCell.Tab.1.left" timestamp="1685891947046">
+    <state width="1860" height="366" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1686026582569" />
+    <state width="1860" height="366" key="GridCell.Tab.1.left" timestamp="1686026582569">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1734" height="170" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1685891947046" />
-    <state width="1734" height="170" key="GridCell.Tab.1.right" timestamp="1685891947046">
+    <state width="1860" height="366" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1686026582569" />
+    <state width="1860" height="366" key="GridCell.Tab.1.right" timestamp="1686026582569">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1734" height="170" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1685891947046" />
-    <state x="252" y="202" key="Registry" timestamp="1685868372884">
+    <state width="1860" height="366" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1686026582569" />
+    <state x="461" y="164" key="SettingsEditor" timestamp="1685943133338">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="252" y="202" key="Registry/0.0.1920.1040@0.0.1920.1040" timestamp="1685868372884" />
-    <state x="121" y="89" key="SettingsEditor" timestamp="1685868256556">
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1685943133338" />
+    <state x="933" y="456" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1686026820955">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="121" y="89" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1685868256556" />
-    <state x="618" y="226" key="Vcs.Push.Dialog.v2" timestamp="1685898107035">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="618" y="226" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1685898107035" />
-    <state x="786" y="392" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1685898101353">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="786" y="392" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1685898101353" />
+    <state x="933" y="456" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1686026820955" />
   </component>
 </project>

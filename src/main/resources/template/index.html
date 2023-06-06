@@ -8,6 +8,8 @@
 	<meta name="_csrf" th:content="${_csrf.token}">
 	<meta name="_csrf_header" th:content="${_csrf.headerName}">
 	<title>影视直播厅</title>
+	<script th:src="@{/login/js/jquery.js}"></script>
+	<script th:src="@{/login/js/vue.js}"></script>
 </head>
 <body>
 <h1 align="center">欢迎进入电影网站首页</h1>
@@ -25,21 +27,31 @@
 	<div sec:authorize="hasAnyAuthority('student')" class="mb-3 form-container" >
 		<h3>学生信息</h3>
 		<div th:insert="student/studentInfo.html"></div>
-
-
-
 	</div>
-	<div sec:authorize="hasAuthority('teacher')" class="form-inner-container" id="form-container">
-		<!--	<h3>VIP专享</h3>-->
-		<!--	<ul>-->
-		<!--		<li><a th:href="@{/detail/vip/1}">速度与激情</a></li>-->
-		<!--		<li><a th:href="@{/detail/vip/2}">猩球崛起</a></li>-->
-		<!--	</ul>-->
 
+	<div sec:authorize="hasAuthority('teacher')" class="form-container" id="form-container">
 		<div th:insert="teacher/common.html"></div>
-		<div class="add-bar" id="add-bar"><i class="iconfont icon-tianjia"></i></div>
-
+<!--		<form-wrapper/>-->
+		<div v-if="formDatas.length != 0">
+			<form :id="count" v-for="f of formDatas">
+				<table class="table table-bordered">
+					<tr>
+						<td v-for="field of fields">
+							<input type="text" :name="field" class="w-75 border-0" v-model.trim="f[field]"
+								   v-if="['stuname', 'classname'].includes(field)">
+							<input v-else type="text" :name="field" class="w-75 border-0" v-model.number.trim="f[field]">
+						</td>
+						<td>占位</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+		<div class="add-bar" id="add-bar" @click="dynamicCreateRows" v-show="show">
+			<i class="iconfont icon-tianjia"></i>
+		</div>
+		<button id="send" class="btn mt-3 btn-primary" @click="send" v-show="show">提交</button>
 	</div>
+
 
 	<div sec:authorize="hasAuthority('Admin')">
 <!--		<a href="">添加班级</a>-->
@@ -50,11 +62,10 @@
 
 <script th:inline="javascript">
 	let fields =  [[${fields}]];
+</script>
+<script th:src="@{/login/js/index.js}" type="module">
 
 </script>
-
-<script th:src="@{/login/js/jquery.js}"></script>
-<script th:src="@{/login/js/index.js}"></script>
 </div>
 </body>
 </html>

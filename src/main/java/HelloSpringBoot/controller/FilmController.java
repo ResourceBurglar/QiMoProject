@@ -11,6 +11,7 @@ import HelloSpringBoot.domain.Customer_Authority;
 import HelloSpringBoot.domain.StuClass;
 import HelloSpringBoot.domain.StuGrade;
 import HelloSpringBoot.service.StuGradeService;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -75,7 +76,12 @@ public class FilmController {
 
         int authority = customer_authority.getAuthority_id();
         int accountId = customer.getId();
-        customer_authorityMapper.setAuthority(accountId,authority);
+        if (authority==3){
+            String stuname = customer.getUsername();
+            stuGradeMapper.addStuButNoClass(stuname);
+            customer_authorityMapper.setAuthority(accountId,authority);
+        }else{
+        customer_authorityMapper.setAuthority(accountId,authority);}
 
         System.out.println("--------------------==========="+accountId+authority);
         return "redirect:/";
@@ -104,16 +110,46 @@ public class FilmController {
         System.out.println(id);
         return "redirect:/";
     }
-
     @Autowired
     private StuClassMapper stuClassMapper;
     @RequestMapping("/admin/distributeClass.html")
-    public String addStudentView(Model model){
-//        List<StuGrade> GradeList = stuGradeService.getAllGrade();
-//        model.addAttribute("StuGradeList",GradeList);
-        List<StuClass>classname = stuClassMapper.inputLikeClassname();
-        model.addAttribute("classNameList",classname);
+    public String addStudenClasstView(Model model){
+        List<StuClass>ClassList = stuClassMapper.findallClass();
+        model.addAttribute("Classlist",ClassList);
+
+        List<StuGrade>notclassSTU = stuGradeMapper.NotClassStu();
+
+            model.addAttribute("notClasslist",notclassSTU);
+
+
         return "admin/distributeClass";
+    }
+
+    @RequestMapping("/distributeClass")
+    public String distributeClass(@RequestParam String classname,@RequestParam String id){
+
+        List<String> classn = new ArrayList<>();
+        System.out.println(classname);
+        String[] splitclassname = classname.split(",");
+        for (String finalClassname:splitclassname){
+            System.out.println(finalClassname);
+            classn.add(finalClassname);
+        }
+
+        List<String> classnid = new ArrayList<>();
+        System.out.println(id);
+        String[] splitid = id.split(",");
+        for (String finalid : splitid){
+            System.out.println(finalid);
+            classnid.add(finalid);
+        }
+
+        for (int i = 0;i < classn.size();i ++)
+        {
+            stuGradeMapper.distributeClass(classn.get(i),Integer.parseInt(classnid.get(i)));
+        }
+
+        return "redirect:/admin/distributeClass.html";
     }
 
 

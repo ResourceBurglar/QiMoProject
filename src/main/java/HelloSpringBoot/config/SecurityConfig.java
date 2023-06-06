@@ -80,13 +80,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //        关闭 csrf防护功能
 //        http.csrf().disable();
 
-
-        // 设置跨域
-//        http.headers().referrerPolicy(ReferrerPolicyHeaderWriter.ReferrerPolicy.STRICT_ORIGIN_WHEN_CROSS_ORIGIN);
-
-
     }
 
+    @Override
+    public void configure(WebSecurity web) throws Exception {
+        web.ignoring().antMatchers("/static/login/css/**", "/static/login/js/**");
+    }
 
     @Bean
     public JdbcTokenRepositoryImpl tokenRepository(){
